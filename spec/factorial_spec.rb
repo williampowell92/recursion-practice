@@ -2,7 +2,7 @@ require 'factorial'
 
 describe 'Factorial' do
   it 'calculates for 0 correctly' do
-    expect(factorial(0)).to eq 1
+    expect(0.factorial).to eq 1
   end
   it 'calculates for 1 to 10 correctly' do
     test_values = (1..10).to_a
@@ -21,7 +21,7 @@ describe 'Factorial' do
       ]
 
     test_values.each { |value|
-      expect(factorial(value)).to eq results[value]
+      expect(value.factorial).to eq results[value]
     }
   end
 end

@@ -1,3 +1,5 @@
-def factorial(n)
-  n < 2 ? 1 : n * factorial(n - 1)
+class Integer
+  def factorial
+    self < 2 ? 1 : self * (self - 1).factorial
+  end
 end
