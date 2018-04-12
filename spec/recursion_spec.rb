@@ -88,3 +88,17 @@ describe 'Triangle' do
     end
   end
 end
+
+describe 'Sum digits' do
+  it 'sums the digits of an integer' do
+    sum_digits = {
+    9 => 9,
+    126 => 9,
+    49 => 13,
+    12 => 3
+    }
+    sum_digits.each do |integer, sum_of_digits|
+      expect(sum_digits(integer)).to eq sum_of_digits
+    end
+  end
+end
