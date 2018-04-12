@@ -141,7 +141,7 @@ describe 'Power n' do
     [3, 3] => 27
     }
     numbers.each do |input, output|
-      Test.assert_equals(power_n(input[0], input[1]), output)
+      expect(power_n(input[0], input[1])).to eq output
     end
   end
 end
