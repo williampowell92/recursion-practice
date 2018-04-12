@@ -18,6 +18,9 @@ def bunny_ears_2(bunnies)
 end
 
 def triangle(rows)
-  return 0 if rows == 0
-  rows + triangle(rows - 1)
+  rows == 0 ? 0 : rows + triangle(rows - 1)
+end
+
+def sum_digits(n)
+  n < 10 ? n : n % 10 + sum_digits(n / 10)
 end
