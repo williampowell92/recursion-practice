@@ -117,3 +117,18 @@ describe 'Count 7s' do
     end
   end
 end
+
+describe 'Count 8s' do
+  it 'counts the number of 8s in a number (double 8 counts for double)' do
+    numbers = {
+    8 => 1,
+    0 => 0,
+    88 => 3,
+    818 => 2,
+    8818 => 4
+    }
+    numbers.each do |number, eight_count|
+      expect(count_eight(number)).to eq eight_count
+    end
+  end
+end
