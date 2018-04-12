@@ -44,3 +44,9 @@ def count_eight(n)
   return n == 8 ? 1 : 0 if n < 10
   calculate_addition(n) + count_eight(n / 10)
 end
+
+def power_n(x, i)
+  return 1 if i == 0
+  return x if i == 1
+  x * power_n(x, i - 1)
+end

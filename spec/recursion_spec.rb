@@ -136,10 +136,11 @@ end
 describe 'Power n' do
   it 'calculates indices' do
     numbers = {
-    [3, 1] => 3,
-    [3, 2] => 9,
-    [3, 3] => 27
-    }
+      [3, 0] => 1,
+      [3, 1] => 3,
+      [3, 2] => 9,
+      [3, 3] => 27
+      }
     numbers.each do |input, output|
       expect(power_n(input[0], input[1])).to eq output
     end
