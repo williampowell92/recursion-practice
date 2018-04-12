@@ -146,3 +146,18 @@ describe 'Power n' do
     end
   end
 end
+
+describe 'Count x' do
+  it 'counts number of x\'s' do
+    strings = {
+    "x" => 1,
+    "y" => 0,
+    "xxhixx" => 4,
+    "xhixhix" => 3,
+    "hi" => 0
+    }
+    strings.each do |string, x_count|
+      expect(count_x(string)).to eq, x_count
+    end
+  end
+end
