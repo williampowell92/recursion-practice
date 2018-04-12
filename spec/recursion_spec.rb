@@ -84,7 +84,7 @@ describe 'Triangle' do
     28
     ]
     triangle_blocks.each_with_index do |blocks, rows|
-      Test.assert_equals(triangle(rows), blocks)
+      expect(triangle(rows)).to eq blocks
     end
   end
 end
