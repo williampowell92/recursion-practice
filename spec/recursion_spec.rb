@@ -25,3 +25,12 @@ describe 'Factorial' do
     }
   end
 end
+
+describe 'Bunny ears' do
+  it 'calculates total bunny ears' do
+      expect(bunny_ears(0)).to eq 0
+      (1..10).each do |bunnies|
+        expect(bunny_ears(bunnies)).to eq 2 * bunnies
+      end
+  end
+end
