@@ -61,3 +61,8 @@ def count_hi(string)
   return string == "hi" ? 1 : 0 if string.length == 2
   (string[-2..-1] == "hi" ? 1 : 0) + count_hi(string[0..-2])
 end
+
+def changexy(string)
+  return string == "x" ? "y" : string if string.length == 1
+    changexy(string[0..-2]) + (string[-1] == "x" ? "y" : string[-1])
+end
