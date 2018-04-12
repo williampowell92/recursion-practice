@@ -157,7 +157,7 @@ describe 'Count x' do
     "hi" => 0
     }
     strings.each do |string, x_count|
-      expect(count_x(string)).to eq, x_count
+      expect(count_x(string)).to eq x_count
     end
   end
 end

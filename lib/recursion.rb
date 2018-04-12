@@ -50,3 +50,8 @@ def power_n(x, i)
   return x if i == 1
   x * power_n(x, i - 1)
 end
+
+def count_x(string)
+  return string == "x" ? 1 : 0 if string.length == 1
+  (string[-1] == "x" ? 1 : 0) + count_x(string[0..-2])
+end
