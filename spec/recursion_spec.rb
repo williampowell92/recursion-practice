@@ -176,3 +176,18 @@ describe 'Count hi' do
     end
   end
 end
+
+describe 'Change xy' do
+  it 'switches x\'s for y\'s' do
+    strings = {
+    "x" => "y",
+    "y" => "y",
+    "codex" => "codey",
+    "xxhixx" => "yyhiyy",
+    "xhixhix" => "yhiyhiy"
+    }
+    strings.each do |string, switched|
+      expect(changexy(string)).to eq switched
+    end
+  end
+end
