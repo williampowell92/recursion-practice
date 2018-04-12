@@ -161,3 +161,18 @@ describe 'Count x' do
     end
   end
 end
+
+describe 'Count hi' do
+  it 'counts number of hi\'s' do
+    strings = {
+    "hi" => 1,
+    "hy" => 0,
+    "y" => 0,
+    "xxhixx" => 1,
+    "xhixhix" => 2
+    }
+    strings.each do |string, hi_count|
+      expect(count_hi(string)).to eq hi_count
+    end
+  end
+end
