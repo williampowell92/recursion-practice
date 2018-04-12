@@ -55,3 +55,9 @@ def count_x(string)
   return string == "x" ? 1 : 0 if string.length == 1
   (string[-1] == "x" ? 1 : 0) + count_x(string[0..-2])
 end
+
+def count_hi(string)
+  return 0 if string.length == 1
+  return string == "hi" ? 1 : 0 if string.length == 2
+  (string[-2..-1] == "hi" ? 1 : 0) + count_hi(string[0..-2])
+end
