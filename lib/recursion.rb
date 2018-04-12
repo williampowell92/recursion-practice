@@ -24,3 +24,8 @@ end
 def sum_digits(n)
   n < 10 ? n : n % 10 + sum_digits(n / 10)
 end
+
+def count_seven(n)
+  return n == 7 ? 1 : 0 if n < 10
+  (n % 10 == 7 ? 1 : 0) + count_seven(n / 10)
+end
