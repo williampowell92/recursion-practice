@@ -1,4 +1,4 @@
-require 'factorial'
+require 'recursion'
 
 describe 'Factorial' do
   it 'calculates for 0 correctly' do
