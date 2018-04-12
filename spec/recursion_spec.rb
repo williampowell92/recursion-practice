@@ -102,3 +102,18 @@ describe 'Sum digits' do
     end
   end
 end
+
+describe 'Count 7s' do
+  it 'counts the number of 7s in a number' do
+    numbers = {
+    7 => 1,
+    0 => 0,
+    7177 => 3,
+    1164 => 0,
+    1257 => 1
+    }
+    numbers.each do |number, seven_count|
+      expect(count_seven(number)).to eq seven_count
+    end
+  end
+end
