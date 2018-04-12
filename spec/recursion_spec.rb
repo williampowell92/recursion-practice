@@ -34,3 +34,21 @@ describe 'Bunny ears' do
       end
   end
 end
+
+describe 'Fibonacci' do
+  it 'calculates fibonacci numbers' do
+    fibonaccis = [
+    0,
+    1,
+    1,
+    2,
+    3,
+    5,
+    8,
+    13
+    ]
+    fibonaccis.each_with_index do |number, i|
+      expect(fibonacci(i)).to eq number
+    end
+  end
+end
