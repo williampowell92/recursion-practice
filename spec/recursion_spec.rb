@@ -132,3 +132,16 @@ describe 'Count 8s' do
     end
   end
 end
+
+describe 'Power n' do
+  it 'calculates indices' do
+    numbers = {
+    [3, 1] => 3,
+    [3, 2] => 9,
+    [3, 3] => 27
+    }
+    numbers.each do |input, output|
+      Test.assert_equals(power_n(input[0], input[1]), output)
+    end
+  end
+end

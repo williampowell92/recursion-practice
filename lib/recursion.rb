@@ -29,3 +29,18 @@ def count_seven(n)
   return n == 7 ? 1 : 0 if n < 10
   (n % 10 == 7 ? 1 : 0) + count_seven(n / 10)
 end
+
+def calculate_addition(n)
+  if n % 10 == 8 && n / 10 % 10 == 8
+    addition = 2
+  elsif n % 10 == 8
+    addition = 1
+  else
+    addition = 0
+  end
+end
+
+def count_eight(n)
+  return n == 8 ? 1 : 0 if n < 10
+  calculate_addition(n) + count_eight(n / 10)
+end
