@@ -70,3 +70,21 @@ describe 'Bunny ears 2' do
     end
   end
 end
+
+describe 'Triangle' do
+  it 'calculates total triangle blocks' do
+    triangle_blocks = [
+    0,
+    1,
+    3,
+    6,
+    10,
+    15,
+    21,
+    28
+    ]
+    triangle_blocks.each_with_index do |blocks, rows|
+      Test.assert_equals(triangle(rows), blocks)
+    end
+  end
+end
