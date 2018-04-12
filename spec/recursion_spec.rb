@@ -52,3 +52,21 @@ describe 'Fibonacci' do
     end
   end
 end
+
+describe 'Bunny ears 2' do
+  it 'calculates mutant bunny ears' do
+    bunny_ears_2 = [
+    0,
+    2,
+    5,
+    7,
+    10,
+    12,
+    15,
+    17
+    ]
+    bunny_ears_2.each_with_index do |ears, bunnies|
+      expect(bunny_ears_2(bunnies)).to eq ears
+    end
+  end
+end
