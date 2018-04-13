@@ -191,3 +191,43 @@ describe 'Change xy' do
     end
   end
 end
+
+describe 'change PI' do
+  it 'changes "pi" to 3.14' do
+    expect(change_pi("pi")).to eq "3.14"
+  end
+
+  single_characters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+    ]
+  single_characters.each do |character|
+    it 'returns a 1 character string unchanged' do
+      expect(change_pi(character)).to eq character
+    end
+  end
+
+  it 'changes "pi" at the start of a string to "3.14"' do
+    expect(change_pi("pixx")).to eq "3.14xx"
+  end
+
+  it 'changes "pi" in the middle of a string to "3.14"' do
+    expect(change_pi("xxpixx")).to eq "xx3.14xx"
+  end
+
+  it 'changes "pi" at the end of a string to "3.14"' do
+    expect(change_pi("xxxxpi")).to eq "xxxx3.14"
+  end
+
+  it 'changes multiple "pi"s spread in a string to "3.14"' do
+    expect(change_pi("xxpixxpixx")).to eq "xx3.14xx3.14xx"
+  end
+
+  it 'changes multiple "pi"s together in a string to "3.14"' do
+    expect(change_pi("pipipi")).to eq "3.143.143.14"
+  end
+end
