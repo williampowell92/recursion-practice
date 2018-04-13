@@ -75,3 +75,8 @@ def remove_x(string)
   return string if string.length < 2 && string != "x"
   (string[0] == "x" ? "" : string[0]) + remove_x(string[1..-1])
 end
+
+def array_contains_six(array)
+  return false if array.empty?
+  array[0] == 6 ? true : array_contains_six(array[1..-1])
+end

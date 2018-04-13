@@ -271,3 +271,39 @@ describe 'Remove x' do
     expect(remove_x("yyxxyy")).to eq "yyyy"
   end
 end
+
+describe 'array contains 6' do
+  it 'returns false for empty array' do
+    expect(array_contains_six([])).to eq false
+  end
+
+  it 'returns true for [6]' do
+    expect(array_contains_six([6])).to eq true
+  end
+
+  it 'returns false for [1]' do
+    expect(array_contains_six([1])).to eq false
+  end
+
+  it 'returns true for [6, 1]' do
+    expect(array_contains_six([6, 1])).to eq true
+  end
+
+  it 'returns true for [1, 6]' do
+    expect(array_contains_six([1, 6])).to eq true
+  end
+
+  it 'works for big arrays with no sixes' do
+    expect(array_contains_six([1, 7, 14, 9, 3, 8, 2])).to eq false
+  end
+
+  it 'works for big arrays with a six' do
+    expect(array_contains_six([1, 7, 14, 6, 3, 8, 2])).to eq true
+  end
+end
+
+=begin
+  it '' do
+    expect(array_contains_six()).to eq
+  end
+=end
