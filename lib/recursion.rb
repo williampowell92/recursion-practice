@@ -64,15 +64,15 @@ end
 
 def changexy(string)
   return string == "x" ? "y" : string if string.length == 1
-    changexy(string[0..-2]) + (string[-1] == "x" ? "y" : string[-1])
+  changexy(string[0..-2]) + (string[-1] == "x" ? "y" : string[-1])
 end
 
 def change_pi(string)
   return string if string.length < 2
-  return "3.14" if string == "pi"
-  if string[0..1] == "pi"
-    "3.14" + change_pi(string[2..-1])
-  else
-    string[0] + change_pi(string[1..-1])
-  end
+  string[0..1] == "pi" ? "3.14" + change_pi(string[2..-1]) : string[0] + change_pi(string[1..-1])
+end
+
+def remove_x(string)
+  return string if string.length < 2 && string != "x"
+  (string[0] == "x" ? "" : string[0]) + remove_x(string[1..-1])
 end

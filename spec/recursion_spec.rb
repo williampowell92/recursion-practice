@@ -231,3 +231,43 @@ describe 'change PI' do
     expect(change_pi("pipipi")).to eq "3.143.143.14"
   end
 end
+
+describe 'Remove x' do
+  it 'changes "x" to ""' do
+    expect(remove_x("x")).to eq ""
+  end
+
+  single_characters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f"
+    ]
+  single_characters.each do |character|
+    it 'returns a 1 character non-"x" string unchanged' do
+      expect(remove_x(character)).to eq character
+    end
+  end
+
+  it 'removes "x" at the start of a string' do
+    expect(remove_x("xyyy")).to eq "yyy"
+  end
+
+  it 'removes "x" from the middle of a string' do
+    expect(remove_x("yyxyy")).to eq "yyyy"
+  end
+
+  it 'removes "x" from the end of a string' do
+    expect(remove_x("yyyx")).to eq "yyy"
+  end
+
+  it 'removes multiple xs spread in a string' do
+    expect(remove_x("yyxyyxyy")).to eq "yyyyyy"
+  end
+
+  it 'removes multiple xs together in a string' do
+    expect(remove_x("yyxxyy")).to eq "yyyy"
+  end
+end
