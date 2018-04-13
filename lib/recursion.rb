@@ -26,7 +26,7 @@ def sum_digits(n)
 end
 
 def count_seven(n)
-  return n == 7 ? 1 : 0 if n < 10
+  return 0 if n < 10 && n != 7
   (n % 10 == 7 ? 1 : 0) + count_seven(n / 10)
 end
 
@@ -52,13 +52,12 @@ def power_n(x, i)
 end
 
 def count_x(string)
-  return string == "x" ? 1 : 0 if string.length == 1
+  return 0 if string.length < 1
   (string[-1] == "x" ? 1 : 0) + count_x(string[0..-2])
 end
 
 def count_hi(string)
-  return 0 if string.length == 1
-  return string == "hi" ? 1 : 0 if string.length == 2
+  return 0 if string.length < 2
   (string[-2..-1] == "hi" ? 1 : 0) + count_hi(string[0..-2])
 end
 
